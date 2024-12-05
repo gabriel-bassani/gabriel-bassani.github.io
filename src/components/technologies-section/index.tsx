@@ -1,9 +1,14 @@
+import { useLanguage } from "../../contexts/language-context";
+import { translations } from "../../translations";
+
 export function TechnologiesSection() {
+  const { language } = useLanguage();
+
     return (
         <>
-            <h1 className="text-center mb-8">Technologies I Use</h1>
+            <h1 className="text-center mb-8 pt-10">Technologies I Use</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aut exercitationem doloribus a voluptatibus, expedita labore veniam. Necessitatibus, fuga optio. Repudiandae voluptatibus dolore mollitia veniam suscipit laborum nihil, doloribus cupiditate!</p>
-            <h2>Frontend</h2>
+            <h2 className="mt-10">Frontend</h2>
             <div className="flex flex-row gap-40 justify-center my-10">
                 <div className="flex flex-col items-center">
                     <h3>Next JS</h3>
@@ -16,6 +21,10 @@ export function TechnologiesSection() {
                 <div className="flex flex-col items-center">
                     <h3>Vue JS</h3>
                     <img src="/assets/icons/vue.svg" alt="VueJS" width={80} />
+                </div>
+                <div className="flex flex-col items-center">
+                    <h3>Tailwind</h3>
+                    <img src="/assets/icons/tailwind.svg" alt="Tailwind" width={80} />
                 </div>
             </div>
             <div className="flex flex-row gap-40 justify-center my-10">
@@ -46,9 +55,15 @@ export function TechnologiesSection() {
                     <h3>Django</h3>
                     <img src="/assets/icons/django.svg" alt="Django" width={80} />
                 </div>
+            </div>
+            <div className="flex flex-row gap-40 justify-center my-10">
                 <div className="flex flex-col items-center">
                     <h3>Laravel</h3>
                     <img src="/assets/icons/laravel.svg" alt="Laravel" width={80} />
+                </div>
+                <div className="flex flex-col items-center">
+                    <h3>Spring</h3>
+                    <img src="/assets/icons/spring.svg" alt="Spring" width={80} />
                 </div>
             </div>
             <h2>Others</h2>
@@ -75,10 +90,14 @@ export function TechnologiesSection() {
                     <h3>Git</h3>
                     <img src="/assets/icons/git-icon.svg" alt="Git" width={80} />
                 </div>
+                <div className="flex flex-col items-center">
+                    <h3>Kubernetes</h3>
+                    <img src="/assets/icons/kubernetes.svg" alt="Kubernetes" width={80} />
+                </div>
             </div>
-            <p className="px-40">Além disso, outras tecnologias conhecidas por mim, que podem ser de interesse são: Flutter, C, C++,  Java, Electron, Selenium, Cypress, Express, Flask e Java Spring.
-Experiência na área de Internet das Coisas (IoT).CSS, e HTML, Bootstrap, Tailwind, Kubernetes, CI/CD, MQTT, RabbitMQ,  OpenStreetMaps, JavaServer Faces(JSF).
-</p>
+            <p className="px-40">
+                {translations[language].technologies.bottom}
+            </p>
             {/* <h2>Backend</h2> */}
         </>
     );
