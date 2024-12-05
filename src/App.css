@@ -1,0 +1,30 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+  background: #1F1B24;
+  height: 100%;
+  width: 100vw;
+  color: white;
+  h1 {
+    color: white;
+    font-size: 44px;
+    font-weight: 600;
+  }
+  p{
+    color: #939185;
+  }
+  h2 {
+    color: #EEEDEB;
+    font-size: 28px;
+    font-weight: 500;
+  }
+  h3{
+    color: #939185;
+    font-size: 18px;
+    /* font-weight: 600; */
+
+  }
+}
